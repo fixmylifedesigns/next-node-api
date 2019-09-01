@@ -7,7 +7,9 @@ const Index = () => {
         <title>Fixmylife</title>
       </Head>
       <div className="navigationContainer">
-          <a className="portfolio" href="https://www.duranirving.com/">DuranIrving.com</a>
+        <a className="portfolio" href="https://www.duranirving.com/">
+          DuranIrving.com
+        </a>
 
         <nav className="navigation">
           <a
@@ -51,8 +53,30 @@ const Index = () => {
             </div>
           </div>
         </div>
-        <div className="section" id="section1">
+        <div className="section">
           <div className="sectionContent">
+            <div className="imgContainer">
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/RnbW-0t9ixY"
+                frameBorder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div className="textContainer">
+              <h5>
+                "This tutorial goes through the steps of downloading and setting
+                up out Next Js app. In just a few minutes you can get start and
+                depoly an app alongside with a server."
+              </h5>
+            </div>
+          </div>
+        </div>
+
+        <div className="section" id="section1">
+          <div className="sectionContent ContentReverse">
             <div className="imgContainer">
               <iframe
                 width="560"
@@ -73,23 +97,28 @@ const Index = () => {
             </div>
           </div>
         </div>
-         {/* <div className="section">
-          <div className="sectionContent ContentReverse">
+
+        <div className="section" id="section1">
+          <div className="sectionContent">
             <div className="imgContainer">
-              <img
-                src=""
-                alt=""
-              />
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/YNJAKLru2wY"
+                frameBorder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
             </div>
             <div className="textContainer">
-              <h5>
-                ""
-              </h5>
+              <h3>
+                This tutorial you how to deploy our Next Js app/api on heroku.
+                These steps will also work on my Node Js boilerplate. In less
+                than 10 minutes you can start a Full Stack project deploy it.
+              </h3>
             </div>
           </div>
-        </div> */}
-
-       
+        </div>
       </div>
       <style jsx global>
         {`
@@ -133,7 +162,7 @@ const Index = () => {
             background: white;
           }
           .section:nth-child(odd) {
-            background: #9b9b9b;
+            background: #282C34;
           }
           .section:first-child {
             padding: 30px 0;
