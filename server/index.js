@@ -14,7 +14,7 @@ app
   });
 
 server.listen(port, () => {
-  console.log(`\n fixmylife-node-api Live On ${port}\n`);
+  console.log(`\n fixmylife-node-api Live On http://localhost:${port} \n`);
 });
   })
   .catch(ex => {
