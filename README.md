@@ -1,4 +1,4 @@
-# Fixmylife-Node-Api
+# Next-Node-Api
 
 This boilerplate is building off of my first [Node Api Boilerplate](https://github.com/fixmylife-boilerplates/fixmylife-node-api)<br>
 The big difference is now you are running a app with server side<br>
