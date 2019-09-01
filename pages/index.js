@@ -5,7 +5,7 @@ const Index = () => {
   return (
     <section>
       <Head>
-        <title>My styled page</title>
+        <title>Fixmylife</title>
       </Head>
       <div className="navigationContainer">
         <Link href="https://www.duranirving.com/">
@@ -63,7 +63,7 @@ const Index = () => {
                 width="560"
                 height="315"
                 src="https://www.youtube.com/embed/cGs1AjyHRHc"
-                frameborder="0"
+                frameBorder="0"
                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen
               ></iframe>
@@ -82,16 +82,13 @@ const Index = () => {
           <div className="sectionContent ContentReverse">
             <div className="imgContainer">
               <img
-                src="https://github.com/brokenulock/frontend/blob/master/src/bulfmlimg/design2.png?raw=true"
-                className="illustration"
+                src=""
                 alt=""
               />
             </div>
             <div className="textContainer">
               <h5>
-                Jimmy quickly went on brokenulock.com and made a post alerting
-                the other users his bike had been stolen. He listed the make,
-                model, location and any other valuable information.
+                ""
               </h5>
             </div>
           </div>

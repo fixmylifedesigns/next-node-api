@@ -19,9 +19,11 @@
     "sqlite": "^3.0.3"
   },
   "scripts": {
-    "start": "next build node && server/index.js ",
+    "build": "next build",
+    "start": "next build && node server/index.js ",
     "dev": "next build && nodemon server/index.js",
-    "server": "nodemon server/index.js"
+    "server": "nodemon server/index.js",
+    "client": "next"
   },
   "devDependencies": {
     "nodemon": "^1.19.1"
