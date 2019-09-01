@@ -1,7 +1,28 @@
 # Fixmylife-Node-Api
 
-boilerplate for node express backend to make my life simpler<br>
-This is a set up I personally use when building a backend.<br>
+This boilerplate is building off of my first [Node Api Boilerplate](https://github.com/fixmylife-boilerplates/fixmylife-node-api)<br>
+The big difference is now you are running a app with server side<br>
+With the help of [NextJS](https://www.npmjs.com/package/next) you are able to make a quick and simple react app plus build a server right along side it.<br>
+
+Instead of running `yarn server` you will be running `yarn dev` to launch both the app and api.<br>
+These are the all the scripts that come with this boilerplate<br>
+
+```
+"scripts": {
+    "build": "next build",
+    "start": "next build && node server/index.js ",
+    "dev": "next build && nodemon server/index.js",
+    "server": "nodemon server/index.js",
+    "client": "next"
+  }
+```
+`yarn client` will start up only the app in [http://localhost:3000/](http://localhost:3000/)<br>
+`yarn start` will simply build the app and start the server.<br>
+`yarn dev` will build the app, start the server and watch for changes so you dont have to keep resetting it.<br>
+`yarn server` does the same as `yarn dev` except for running the build command for the app, with that being said if `yarn server` gives you an error you might need to run `yarn build` first.<br>
+`yarn build` simply builds the app.<br>
+
+
 
 ## Using the Api
 
