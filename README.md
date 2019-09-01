@@ -26,6 +26,11 @@ These are the all the scripts that come with this boilerplate<br>
 
 ## Using the Api
 
+You can find an example of this Next app on [herokuapp](https://fixmylife-next-api.herokuapp.com/).
+Will build out the functionality soon.
+nothing is different from when you launch a regular node api or this next app.
+
+
 When you login a user, in return you get a Token. You'll want to return that token in your headers when making a axios call for **post**, **put** or **delete**.
 
 - [Api Doc](https://documenter.getpostman.com/view/7133880/SVfQRUJX?version=latest) - Documentation on all the endpoints this api comes with.
