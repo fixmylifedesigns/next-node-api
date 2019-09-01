@@ -14,7 +14,7 @@ const Index = () => {
 
         <nav className="navigation">
           <a
-            href="https://documenter.getpostman.com/view/7133880/SVfMUAdJ?version=latest"
+            href="https://documenter.getpostman.com/view/7133880/SVfQRUJX?version=latest"
             className="navLink"
             style={{ marginRight: "15px" }}
           >
