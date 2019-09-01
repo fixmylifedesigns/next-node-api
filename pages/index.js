@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Head from "next/head";
 
 const Index = () => {
@@ -8,22 +7,18 @@ const Index = () => {
         <title>Fixmylife</title>
       </Head>
       <div className="navigationContainer">
-        <Link href="https://www.duranirving.com/">
-          <h1 className="portfolio">DuranIrving.com</h1>
-        </Link>
+          <a className="portfolio" href="https://www.duranirving.com/">DuranIrving.com</a>
 
         <nav className="navigation">
           <a
             href="https://documenter.getpostman.com/view/7133880/SVfQRUJX?version=latest"
             className="navLink"
-            style={{ marginRight: "15px" }}
           >
             Api Doc
           </a>
           <a
             href="https://github.com/fixmylife-boilerplates/next-node-api"
             className="navLink"
-            style={{ marginRight: "15px" }}
           >
             Github Repo
           </a>
@@ -49,7 +44,7 @@ const Index = () => {
               </h3>
               <a
                 href="https://github.com/fixmylifedesigns/next-node-api/archive/master.zip"
-                className="navLink"
+                className="downloadLink"
               >
                 <h3>Download Boilerplate</h3>
               </a>
@@ -111,42 +106,39 @@ const Index = () => {
             flex-direction: row;
             justify-content: space-between;
           }
-          .navLink {
+          .downloadLink{
             color: white;
             font-weight: bold;
           }
-          .navLink:hover {
-            cursor: pointer;
+          .navLink {
+            color: white;
+            font-weight: bold;
+            margin-right:5px;
+            
           }
-
           .portfolio{
             color:white;
           }
-
           .navigation {
             display: flex;
             align-items:center;
           }
-
           .homeContainer {
             width: 100%; 
             display: flex;
             flex-direction: column;
             justify-content: center; */
           }
-
           .section {
             background: white;
           }
           .section:nth-child(odd) {
             background: #9b9b9b;
           }
-
           .section:first-child {
             padding: 30px 0;
             background: #282C34;
           }
-
           .topMain {
             margin: auto;
             height: 95%;
