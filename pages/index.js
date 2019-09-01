@@ -8,7 +8,7 @@ const Index = () => {
       </Head>
       <div className="navigationContainer">
         <a className="portfolio" href="https://www.duranirving.com/">
-          DuranIrving.com
+          <h2>DuranIrving.com</h2>
         </a>
 
         <nav className="navigation">
