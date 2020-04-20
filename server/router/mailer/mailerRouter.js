@@ -21,7 +21,7 @@ var dateString =
   ("0" + m.getUTCSeconds()).slice(-2);
 
 router.post("/", (req, res) => {
-  const { url, name, email, phone, message, subject } = req.body;
+  const { to, url, name, email, phone, message, subject } = req.body;
 
   const handlebarOptions = {
     viewEngine: {
@@ -34,7 +34,7 @@ router.post("/", (req, res) => {
   transporter.use("compile", hbs(handlebarOptions));
 
   let mailOptions = {
-    to: ["ijd.irving@gmail.com", "fixmylifenyc@gmail.com"],
+    to,
     subject: subject
       ? name.toUpperCase() + " - " + subject
       : `YOU GOT A NEW MESSAGE: ${url}`,
