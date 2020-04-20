@@ -20,7 +20,7 @@ var dateString =
   ":" +
   ("0" + m.getUTCSeconds()).slice(-2);
 
-router.post("/duranirving", (req, res) => {
+router.post("/", (req, res) => {
   const { url, name, email, phone, message, subject } = req.body;
 
   const handlebarOptions = {
@@ -40,44 +40,7 @@ router.post("/duranirving", (req, res) => {
       : `YOU GOT A NEW MESSAGE: ${url}`,
     template: "main",
     context: {
-      name,
-      email,
-      phone,
-      message,
-      time: dateString,
-    },
-  };
-  transporter.sendMail(mailOptions, (err, data) => {
-    let pass = process.env.EMAIL;
-    if (err) {
-      return res
-        .status(500)
-        .json({ err, message: "error sending your email", pass });
-    }
-    return res.status(200).json(data);
-  });
-});
-
-router.post("/fixmylife", (req, res) => {
-  const { name, email, phone, message, subject } = req.body;
-
-  const handlebarOptions = {
-    viewEngine: {
-      extName: ".handlebars",
-      layoutsDir: __dirname + `/views/fixmylifecontact`,
-    },
-    viewPath: __dirname + `/views/fixmylifecontact`,
-  };
-
-  transporter.use("compile", hbs(handlebarOptions));
-
-  let mailOptions = {
-    to: ["ijd.irving@gmail.com", "fixmylifenyc@gmail.com"],
-    subject: name + " - " + subject,
-    template: "main",
-    context: {
-      url: "www.fmlcycling.com",
-      img: "https://www.fmlcycling.com/static/media/fixmylifelogo.90ec3d8d.png",
+      url,
       name,
       email,
       phone,
