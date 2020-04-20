@@ -21,24 +21,25 @@ var dateString =
   ("0" + m.getUTCSeconds()).slice(-2);
 
 router.post("/duranirving", (req, res) => {
-  const { url, name, email, phone, message, to } = req.body;
+  const { url, name, email, phone, message, subject } = req.body;
 
   const handlebarOptions = {
     viewEngine: {
       extName: ".handlebars",
-      layoutsDir: __dirname + `/views/duranirvingcontact`,
+      layoutsDir: __dirname + `/views/`,
     },
-    viewPath: __dirname + `/views/duranirvingcontact`,
+    viewPath: __dirname + `/views/`,
   };
 
   transporter.use("compile", hbs(handlebarOptions));
 
   let mailOptions = {
-    to,
-    subject: `You got a new message: ${url}`,
+    to: ["ijd.irving@gmail.com", "fixmylifenyc@gmail.com"],
+    subject: subject
+      ? name.toUpperCase() + " - " + subject
+      : `YOU GOT A NEW MESSAGE: ${url}`,
     template: "main",
     context: {
-      url,
       name,
       email,
       phone,
@@ -58,7 +59,7 @@ router.post("/duranirving", (req, res) => {
 });
 
 router.post("/fixmylife", (req, res) => {
-  const { url, name, email, phone, message, to, subject } = req.body;
+  const { name, email, phone, message, subject } = req.body;
 
   const handlebarOptions = {
     viewEngine: {
@@ -71,11 +72,12 @@ router.post("/fixmylife", (req, res) => {
   transporter.use("compile", hbs(handlebarOptions));
 
   let mailOptions = {
-    to,
+    to: ["ijd.irving@gmail.com", "fixmylifenyc@gmail.com"],
     subject: name + " - " + subject,
     template: "main",
     context: {
-      url,
+      url: "www.fmlcycling.com",
+      img: "https://www.fmlcycling.com/static/media/fixmylifelogo.90ec3d8d.png",
       name,
       email,
       phone,
